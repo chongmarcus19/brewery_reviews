@@ -155,12 +155,11 @@ app.post('/create', function(req,res) {
 });
 
 app.get('/filter_reviews', function(req, res) {
-  var brewery_name = req.body.name;
-  var brewery  = "select * from brewery where brewery_name = '" + brewery_name + "';";
+  var brew_name = req.query.name;
+  var brewery = "select * from brewery where brewery_name = '" + brew_name + "';";
 
   db.task('get-everything', task => {
     return task.batch([
-      task.any(brewery_name),
       task.any(brewery)
     ]);
   })
@@ -171,7 +170,7 @@ app.get('/filter_reviews', function(req, res) {
     console.log(items);
     res.render('pages/reviews',{
       my_title: "Brewery Reviews",
-      items: items[0][1],
+      items: items[0],
       error: false,
       message: ''
     })
