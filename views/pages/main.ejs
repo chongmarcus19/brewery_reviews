@@ -1,0 +1,107 @@
+<%- include('../partials/header'); -%>
+<body>
+  <main>
+    <div class="" style="background-color: #89d4ff;">
+      <div class="container-fluid" style="padding: 2%; ">
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/reviews">Reviews</a>
+            </li>
+        </ul>
+
+
+        <form class="" action="/get_feed" method="post">
+          <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-5">
+              <input class="form-control" type="text" name="city" placeholder="Enter City Name">
+            </div>
+            <div class="col-1">
+              <input class="btn btn-light" type="submit" name="Submit" value = "Submit"/>
+            </div>
+
+          
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container-lg" style="margin-top: 2%;">
+    <%
+    if (items) {
+    var cards = '';
+    var acard = '';
+    var link = '';
+      
+    %>
+        <div class="container">
+        <div class="row">
+      
+        <% items.forEach(function(item) { %>
+  
+          <div class ="card" style ="width: 20rem;">
+            <div class = "card-body">
+              <h4 class = "font-weight-bold">
+                <%=item.name%>
+              </h2>
+              <p>
+                <%=item.brewery_type%>
+              </p>
+              <p>
+                <%=item.street%>
+              </p>
+  
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addReview">
+                Add Review
+              </button>
+              
+              <form id="make_post" action="/create" method="POST">
+              <div class="modal fade" id="addReview" tabindex="-1" role="dialog" aria-labelledby="addReviewLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addReviewLabel">Add Review</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                      <div class="md-form">
+                        <label for="comment">Brewery Name</label>
+                        <textarea class="form-control" rows="1" name="name" id="name" readonly><%=item.name%></textarea>
+                      </div>
+              
+                      <div class="textarea-container">
+                        <label for="comment">Write your review here:</label>
+                        <textarea class="form-control" rows="15" name="review" id="review"></textarea>
+                      </div>
+              
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" id="reviewSubmit" onclick="document.location='/reviews'">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            </div>
+          </div>
+        <%});%>
+        </div>
+      </div>
+      <%- cards %>
+  <% } %>
+  </div>
+
+  </main>
+<%- include('../partials/footer'); -%>
