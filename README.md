@@ -9,6 +9,8 @@ Incorporates front-end features such as
 
 Incorporates a back-end database for brewery reviews
 
+Built with HTML, CSS, Javascript, PostgreSQL, EJS, and JQuery. Hosted using Docker
+ 
 ## Running and viewing webpage locally:
 
 Download and Install Docker for your machine (https://docs.docker.com/get-docker/)
