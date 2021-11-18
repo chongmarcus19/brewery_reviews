@@ -33,8 +33,8 @@ $ docker-compose down
 If encountering issues with database initialization, remove conflicting volumes tied to the docker container
 
 ##Snaps
-<img src="screenshots/Screen Shot 2021-11-18 at 2.27.55 PM.png" height="350px" width="950pxpx">
-<img src="screenshots/Screen Shot 2021-11-18 at 2.28.28 PM.png" height="350px" width="950pxpx">
-<img src="screenshots/Screen Shot 2021-11-18 at 2.29.45 PM.png" height="350px" width="950pxpx">
-<img src="screenshots/Screen Shot 2021-11-18 at 2.45.08 PM.png" height="350px" width="950pxpx">
-<img src="screenshots/Screen Shot 2021-11-18 at 2.45.31 PM.png" height="350px" width="950pxpx">
+<img src="screenshots/Screen Shot 2021-11-18 at 2.27.55 PM.png" height="500px" width="950pxpx">
+<img src="screenshots/Screen Shot 2021-11-18 at 2.28.28 PM.png" height="500px" width="950pxpx">
+<img src="screenshots/Screen Shot 2021-11-18 at 2.29.45 PM.png" height="500px" width="950pxpx">
+<img src="screenshots/Screen Shot 2021-11-18 at 2.45.08 PM.png" height="500px" width="950pxpx">
+<img src="screenshots/Screen Shot 2021-11-18 at 2.45.31 PM.png" height="500px" width="950pxpx">
