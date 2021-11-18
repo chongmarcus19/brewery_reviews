@@ -1,4 +1,4 @@
-# brewery_reviews
+# Brewery Reviews
 
 ## Description
 A brewery review web app utilizing the Open BreweryDB API. 
