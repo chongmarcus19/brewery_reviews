@@ -1,6 +1,15 @@
 # brewery_reviews
 
-### Running and viewing webpage locally:
+## Description
+A brewery review web app utilizing the Open BreweryDB API. 
+Incorporates front-end features such as 
+- Write reviews for real breweries
+- Read existing reviews of real breweries
+- Search and filter reviews by city or name
+
+Incorporates a back-end database for brewery reviews
+
+## Running and viewing webpage locally:
 
 Download and Install Docker for your machine (https://docs.docker.com/get-docker/)
 
@@ -20,3 +29,5 @@ To stop the application from the CLI
 
 $ docker-compose down
 If encountering issues with database initialization, remove conflicting volumes tied to the docker container
+
+##Snaps
